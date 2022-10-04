@@ -1,16 +1,29 @@
 # webview_in_flutter
 
-A new Flutter project.
+Menambahkan WebView ke aplikasi Flutter
 
-## Getting Started
+### Menambahkan plugin WebView Flutter sebagai dependensi
 
-This project is a starting point for a Flutter application.
+`flutter pub add webview_flutter`
 
-A few resources to get you started if this is your first Flutter project:
+### Mengonfigurasi Android minSDK
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Buka file `android/app/build.gradle` dan ubah `minSdkVersion` menjadi 19
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Hasil
+
+![](images/1.jpg)
+
+### Memproses peristiwa pemuatan halaman
+
+Ada tiga peristiwa pemuatan halaman berbeda yang diaktifkan: `onPageStarted`, `onProgress`, dan `onPageFinished`
+
+#### Membuat file baru di `lib/src/web_view_stack.dart`
+
+<img src="images/2.jpg" width="600">
+
+#### Hasil
+
+![](images/3.jpg)
+
+### Menggunakan WebViewController
